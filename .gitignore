@@ -1,0 +1,17 @@
+/Library/
+/Temp/
+/obj/
+/Logs/
+/UserSettings/
+/Builds/
+/*.sln
+/*.slnx
+/*.csproj
+/*.csproj.user
+/.vscode/
+/.vs/
+
+# Baked data
+*_comp_light.exr*
+*_comp_shadowmask.png*
+ReflectionProbe-*.exr*

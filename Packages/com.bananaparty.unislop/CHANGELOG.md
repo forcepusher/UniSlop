@@ -1,0 +1,57 @@
+# Changelog  
+All notable changes to this project will be documented in this file.  
+  
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),  
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).  
+  
+## [2.2.0] - 2026-07-27
+### Added
+- New `unity_execute_method` tool that executes a static C# method in the editor via reflection, with optional string arguments converted to the method's parameter types.  
+
+## [2.1.5] - 2026-07-16
+### Added
+- Tests tool call stall detection and recovery logic.  
+
+## [2.1.4] - 2026-07-09
+### Fixed
+- Assembly-name test filters (e.g. "My.Tests") matched zero tests because ".dll" was appended, while the Unity Test Runner expects the assembly name without the extension.  
+### Changed
+- Replaced netstat/lsof port scanning with a direct bind probe when checking that the MCP port is free.  
+- Removed per-request debug notifications from the MCP server and stopped logging status polls, cutting console spam and redundant traffic.  
+### Added
+- Test coverage for MCP protocol edges (ping, batch requests, notifications, malformed JSON, GET rejection) and the editor's internal API listener.  
+  
+## [2.1.3] - 2026-06-26
+## Fixed
+- Another approach to improving stability for Unity MCP Compile tool.  
+  
+## [2.1.2] - 2026-06-21
+## Fixed
+- Stability improvements for Unity MCP Compile tool.  
+- Compilation should execute on background and doesn't require clicking on editor.  
+  
+## [2.1.1] - 2026-06-18
+## Fixed
+- Stability improvements for MCP connection and server starts.  
+  
+## [2.1.0] - 2026-06-16
+### Changed
+- Replaced the bundled Bun runtime with the editor's own mono runtime.
+  
+## [2.0.0] - 2026-06-15
+### Changed
+- Detached MCP server from native C# to Bun to survive domain reloads.  
+- Gave more descriptive names to the toolset: unity_compile, unity_list_tests, unity_run_tests
+  
+## [1.0.0] - 2026-06-14
+### Added
+- Initial release.  
+  
+[2.2.0] https://github.com/forcepusher/com.bananaparty.unislop/compare/2.1.5...2.2.0  
+[2.1.5] https://github.com/forcepusher/com.bananaparty.unislop/compare/2.1.4...2.1.5  
+[2.1.4] https://github.com/forcepusher/com.bananaparty.unislop/compare/2.1.3...2.1.4  
+[2.1.3] https://github.com/forcepusher/com.bananaparty.unislop/compare/2.1.2...2.1.3  
+[2.1.2] https://github.com/forcepusher/com.bananaparty.unislop/compare/2.1.1...2.1.2  
+[2.1.1] https://github.com/forcepusher/com.bananaparty.unislop/compare/2.1.0...2.1.1  
+[2.1.0] https://github.com/forcepusher/com.bananaparty.unislop/compare/2.0.0...2.1.0  
+[2.0.0] https://github.com/forcepusher/com.bananaparty.unislop/compare/1.0.0...2.0.0  
